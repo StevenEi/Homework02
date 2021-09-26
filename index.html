@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Work Portfolio - Steven Eiselt</title>
+</head>
+
+<body> 
+    <header>
+        <h1>Steven Eiselt</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#About-Me">About Me</a>
+                </li>
+                <li>
+                    <a href="#Projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#Resume">Resume</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+  
+    <main>
+        <section id="About-Me">
+            <img src="./assets/images/SEPhoto.jpg" class="float-center" alt="SE Headshot" id="Photo"/>
+            <h2>Who Am I?</h2>
+            <p>
+                My name is Steven Eiselt, a 28 year old QA/QC professional working on a career path change. I am currently enrolled in a Software Development and Coding Bootcamp
+                orchestrated by Trilogy Education in conjunction with the University of Washington. My dream is to use the skills I learn from this program to work in as a 
+                game designer / developer in the video game industry. My hobbies include reading, hiking, rock climbing, video games and frisbee. I live in Bellingham Washington with my
+                girlfriend Ryleigh who is currently enrolled at Western Washington University to become a school councilor.
+            </p>
+        </section>
+        <section id="Projects"> 
+            <img src="./assets/images/AppPhoto.jpg" class="float-center" alt="Applications" id="Photo"/>
+            <h2>What I've Done</h2>
+            <p>
+                So far the only applicable project I have done was to make a cheat-sheet for helpful CSS codes, mainly revolving around manipulating flexboxes. 
+                Click the underlined text below for a reference!
+            </p>
+            <br>
+            <span><a href="https://stevenei.github.io/SnippetSheet/">Application01</a></span>
+            </div>
+        </section>
+        <section id="Resume"> 
+            <div class="popup" onclick="myFunction()">Click for a link to my resume!
+                <span class="popuptext" id="myPopup">https://github.com/StevenEi/Homework01/</span>
+              </div>
+        </section>
+    </main>
+    <aside>
+        <section class="Contact-Me">
+            <h3>Contact Me</h3>
+            <a href="mailto:seiselts@gmail.com"><img src="./assets/images/mail.jpg"/></a>
+            <a href="https://www.linkedin.com/in/steven-eiselt-524561164/"><img src="./assets/images/Linkedin.png"></a>
+            <span><img src="./assets/images/phone.jpg"></span>
+                <p>(###)###-####</p>
+        </section>
+    </aside>
+
+ <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+ </script>
+</body>
+
+<script src="Assets/script.js"></script>
+
+</html>
