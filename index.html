@@ -4,75 +4,112 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Work Portfolio - Steven Eiselt</title>
 </head>
 
-<body> 
-    <header>
-        <h1>Steven Eiselt</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#About-Me">About Me</a>
-                </li>
-                <li>
-                    <a href="#Projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#Resume">Resume</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-  
-    <main>
-        <section id="About-Me">
-            <img src="./assets/images/SEPhoto.jpg" class="float-center" alt="SE Headshot"/>
-            <h2>Who Am I?</h2>
-            <p>
-                My name is Steven Eiselt, a 28 year old QA/QC professional working on a career path change. I am currently enrolled in a Software Development and Coding Bootcamp
-                orchestrated by Trilogy Education in conjunction with the University of Washington. My dream is to use the skills I learn from this program to work in as a 
-                game designer / developer in the video game industry. My hobbies include reading, hiking, rock climbing, video games and frisbee. I live in Bellingham Washington with my
-                girlfriend Ryleigh who is currently enrolled at Western Washington University to become a school councilor.
-            </p>
-        </section>
-        <section id="Projects"> 
-            <img src="./assets/images/AppPhoto.jpg" class="float-center" alt="Applications"/>
-            <h2>What I've Done</h2>
-            <p>
-                So far the only applicable project I have done was to make a cheat-sheet for helpful CSS codes, mainly revolving around manipulating flexboxes. 
-                Click the underlined text below for a reference!
-            </p>
-            <br>
-            <span><a href="https://stevenei.github.io/SnippetSheet/">Application01</a></span>
+<header>
+    <div class="jumbotron bg-dark text-light">
+        <div class="container-header">
+            <h1 class="display-2">Steven Eiselt
+                <a class="navbar-brand" href="" target="_blank" id="home-icon">
+                    <img src="Assets/Images/Home-Icon.jpg" width="30" height="30" alt="">
+                </a>
+                <a class="navbar-brand" href="https://github.com/StevenEi" target="_blank">
+                    <img src="Assets/Images/Github-Icon.jpg" width="30" height="30" alt="">
+                </a>
+                <a class="navbar-brand" href="https://www.linkedin.com/in/steven-eiselt-524561164/" target="_blank">
+                    <img src="Assets/Images/Linkedin.png" width="30" height="30" alt="">
+                </a>
+            </h1>
+            <p class="lead">A Student of Coding and the Web</p>
+        </div>
+    </div>
+</header>
+<div class="container-main">
+    <div class="main-buttons row">
+        <div id="about-me" class="col-2">
+            <button type="button" class="btn-dark" id="about-btn">About Me</button>
+            <div class="card" id="about-me-card" style="width: 18rem;">
+                <img class="card-img-top" src="./assets/images/SEPhoto.jpg" alt="SE Headshot">
+                <div class="card-body">
+                    <p class="card-text">My name is Steven Eiselt, a 28 year old QA/QC professional working on a career
+                        path
+                        change. I am
+                        currently enrolled in a Software Development and Coding Bootcamp
+                        orchestrated by Trilogy Education in conjunction with the University of Washington. My dream is
+                        to
+                        use
+                        the skills I learn from this program to work in as a
+                        game designer / developer in the video game industry. My hobbies include reading, hiking, rock
+                        climbing,
+                        video games and frisbee. I live in Bellingham Washington with my
+                        girlfriend Ryleigh who is currently enrolled at Western Washington University to become a school
+                        councilor.</p>
+                    <a href="" target="_blank" id="Resume">See my Resume</a>
+
+                </div>
+                <button type="button" class="btn-danger" id="close-btn-about">Close</button>
             </div>
-        </section>
-        <section id="Resume"> 
-            <div class="popup" onclick="myFunction()">Click for a link to my resume!
-                <span class="popuptext" id="myPopup">https://github.com/StevenEi/Homework01/</span>
-              </div>
-        </section>
-    </main>
-    <aside>
-        <section class="Contact-Me">
-            <h3>Contact Me</h3>
-            <a href="mailto:seiselts@gmail.com"><img src="./assets/images/mail.jpg"/></a>
-            <a href="https://www.linkedin.com/in/steven-eiselt-524561164/"><img src="./assets/images/Linkedin.png"></a>
-            <span><img src="./assets/images/phone.jpg"></span>
-                <p>(###)###-####</p>
-        </section>
-    </aside>
-
- <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-          var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-        }
- </script>
-</body>
-
-<script src="Assets/script.js"></script>
+        </div>
+        <div id="projects" class="col-2">
+            <button type="button" class="btn-dark" id="projects-btn">Projects</button>
+            <div class="card" id="projects-card" style="width: 18rem;">
+                <div class="card-body">
+                    <button type="button" class="btn-danger project-btn" id="btn-memory">Memory Game</button>
+                    <div id="memory-modal" class="modal">
+                        <div id="memory-modal-content" class="modal-content"> <span class="close-modal">&times;</span>
+                            <h3>The Memory Game - a fun card matching game with images of voice actors and illustrations of my favorite Dungeons and Dragons podcast - NaddPod
+                                <br>
+                                <img class="modal-img" src="C:\Solo Projects\Memory Game\img\Game-Screenshot.jpg" alt="Memory Game Screenshot">
+                                <br>
+                                <a href="https://stevenei.github.io/Memory-Game/" target="_blank">Deployed Game</a>
+                                <br>
+                                <a href="https://github.com/StevenEi/Memory-Game" target="_blank">Github Repo</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-danger project-btn" id="btn-gag">Gifs and Grub</button>
+                    <div id="gag-modal" class="modal">
+                        <div id="gag-modal-content" class="modal-content"> <span class="close-modal">&times;</span>
+                            <h3>GIFs and Grub - A comedic website that will return food recipes based on user input paired with a GIF!
+                                <br>
+                                <img class="modal-img" src="Assets/Images/GaGScreenshot.jpg" alt="Deployed Website">
+                                <br>
+                                <a href="https://joecliffordofficial.github.io/project_one_gr5/" target="_blank">Deployed Website</a>
+                                <br>
+                                <a href="https://github.com/joecliffordofficial/project_one_gr5" target="_blank">Github Repo</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-danger project-btn" id="btn-CSS">CSS Cheat Sheet</button>
+                    <div id="CSS-modal" class="modal">
+                        <div id="CSS-modal-content" class="modal-content"> <span class="close-modal">&times;</span>
+                            <h3>The CSS Snippet Cheatsheet - a handy tool for remembering key CSS code
+                                <br>
+                                <img class="modal-img" src="Assets/Images/Application1.jpg" alt="CSS Cheatsheet Screenshot">
+                                <br>
+                                <a href="https://stevenei.github.io/SnippetSheet/" target="_blank">Deployed Sheet</a>
+                                <br>
+                                <a href="https://github.com/StevenEi/SnippetSheet" target="_blank">Github Repo</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-danger" id="close-btn-projects">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script src="Assets/script.js"></script>
+</div>
 
 </html>
+
+<!-- Static background with stuff on top that is interactable -->
+<!-- Add a "skills" section that has animations associated with the different skills -->
+<!-- animate.css is a library for css animations to check out -->

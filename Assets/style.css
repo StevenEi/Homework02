@@ -4,241 +4,98 @@
     margin: 0;
 }
 
-body {
-    background-image: url("../assets/Images/Cascades.jpg");
-    background-color: #cccccc; 
-    height: 100%; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
+.container-main {
+  background-image: url("../Assets/Images/Cascades.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-/* The header section and subsections dictate the properties of the header located above the main webpage image*/ 
-
-header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color:black;
-    color: white;
+.container-header {
+  margin: 30px;
 }
 
-header h1 {
-    display: inline-block;
-    font-size: 48px;
-    padding-left: 3%;
-    border-color: red
-    border-
+.card {
+  visibility: hidden;
+  display: inline-flex;
 }
 
-header nav {
-    padding: 15px;
-    margin-right: 3%; 
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
-    font-size: 20px;
+.btn-dark {
+  border-radius: 30%;
+  padding: 5px;
+  margin: 10px;
 }
 
-header nav ul {
-    list-style-type: none;
+.navbar-brand {
+  float: right;
+  margin-top: 40px;
+  margin-right: 20px;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
-    margin-right: 25px;
-    font-size: larger;
-    border-style:double;
-    border-color:red;
-    border-radius: 40%;
+.card {
+  border-width: 3px;
+  border-color: black;
+  border-style: double;
 }
 
-/* the "a" section stylizes the three links in the nav bar */
-
-a {
-    color: white;
-    text-decoration: none;
+button:active,
+.navbar-brand:active {
+  transform: scale(0.91);
+  transition: 0.2s;
 }
-
-/* the "p" section stylizes all of the paragraph text throughout the webapge */
-
-p {
-    font-size: 2vw;
-}
-
-/* the .float-(direction) sections style image positions of the primary section directly below the main image */ 
-
-.float-center {
-    float: center;
-    margin-left: 25px;
-}
-
-/* the aside section stylizes the secondary content on the right lower right side of the webpage */
-
-aside {
-    margin-top: 25px;
-    float: right;
-    margin-right: 20px;
-    padding: 15px;
-    clear: both;
-    width: 10%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color:black;
-    border-radius: 50px;
-}
-
-aside p {
-   font-size: 18px; 
-   display: none;
-}
-
-aside section {
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-align: center;
-}
-
-aside section h3 {
-    margin-bottom: 5px;
-}
-
-aside section img {
-    display: block;
-    margin: 10px auto;
-    max-width: 50px;
-    color: white;
-}
-
-span:hover + p {
-    display: block;
-}
-
-/* the main section and subsection stylizes the text and images of the primary content of the webpage below the main image */
-
-main {
-    margin-top:25px;
-    display: inline-block;
-    margin-left: 20px;
-    opacity: 90%;
-    width: 85%;
-}
-
-main p {
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 16%;
-    text-align: center;
-}
-
-main section {
-    margin-bottom: 20px;
-    padding: 20px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: black;
-    color: #ffffff;
-    border-radius: 80px;
-}
-
-main section img {
-    border-radius: 100px;
-    float: left;
-    height: 60%;
-    width: 10%;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-}
-
-main section h2 {
-    display: flex;
-    margin-bottom: 10px;
-    font-size: 36px;
-    justify-content: center;
-}
-
-/* the footer section stylizes the footer made at the bottom of the webpage */
 
 #Resume {
-    display: flex;
-    margin-left: 30%;
-    margin-right: 30%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:white;
-    font-size: 1vw;
-    text-align:justify;
-    justify-content: center;
-    margin-bottom:25px;
-    opacity: 90%;
-    background-color: black;
-    border-radius: 80px;
-    height: 50px;
+  font-weight: bold;
 }
 
-#Projects span {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 24px;
-    text-decoration-line: underline;
+.project-btn {
+  width: 100%;
 }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-/* Popup Styling */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  .popup .popuptext {
-    visibility: hidden;
-    width: 100%;
-    background-color:white;
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    position: absolute;
-    padding: 8px 0;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px; 
-  }
-  
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1.5s;
-    animation: fadeIn 1.5s;
-  }
-  
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
- 
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-img{
+  width: 60%;
+  overflow: none;
+}
+
+/*
   @media screen and (max-width: 1310px) {
     main p {
       font-size: 14pt;
@@ -270,4 +127,4 @@ main section h2 {
       }  
     };
 
-   
+   */
